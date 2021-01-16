@@ -79,15 +79,73 @@ fun main() {
 //     println(stringOfValue)
 
 
-    val name: Any= "firman"
+    // val name: Any= "firman"
+    // val ranges = 10..50
+    // val angka = 2109 
 
-    when(name) {
-        is Long -> println("$name adalah Long")
-        is String -> println("$name adalah String")
-        else -> println("undefined")
+    // when(name) {
+    //     is Long -> println("$name adalah Long")
+    //     is String -> println("$name adalah String")
+    //     else -> println("undefined")
+    // }
+
+    // when(angka) {
+
+    //     in ranges -> println("angka adalah $angka")
+    //     else -> println("bukan di range $ranges")
+    // }
+
+    // val registerNumber = when(val regis= getRegisterNumber()) {
+    //     in 1..50 -> 50 * regis
+    //     in 51..100 -> 100 * regis
+    //     else -> regis
+    // }
+    // var counter = 0
+    // // while(counter <= 5) {
+    // //     print("hello from kotlin")
+    // //     counter++;
+    // // }
+    
+    // do {
+    //     print("hello world")
+    //     counter++
+    // } while(counter <= 5)
+
+
+    // var ranges = 1..10 step 2
+    // var arrays = arrayOf(1,2,3,456,74,12)
+    // arrays.forEach{
+    //     println("$it")
+    // }
+
+//  var chars = 'A'.rangeTo('F')
+
+//  chars.forEach{
+//      println("$it")
+//  }
+
+    // var ranges = 1..5
+    // for((i,e) in ranges.withIndex()) {
+    //     println("ranges $e index ke-$i")
+    // }
+
+    // ranges.forEachIndexed{ index, value ->
+    //     println("$value ke - $index")
+    // }
+
+    loop@ for (i in 1..10) {
+        println("outside looping")
+        for (j in 1..10) {
+            if (j > 5) break@loop
+            println("looping ke - $j")
+        }
+
+        
     }
 }
 
+
+// fun getRegisterNumber() = Random.nextInt(100)
 
 // enum class Color(val value: Int) {
 //         RED(1234) {
